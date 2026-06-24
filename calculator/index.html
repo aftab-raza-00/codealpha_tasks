@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Calculator </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="calc-wrap">
+    <div class="calc">
+
+      <!-- Display -->
+      <div class="display">
+        <div class="expression" id="expr"></div>
+        <div class="result" id="result">0</div>
+      </div>
+
+      <!-- Buttons Grid -->
+      <div class="grid">
+
+        <!-- Row 1 -->
+        <button class="btn btn-gray" id="btn-del" onclick="calcDel()">⌫</button>
+        <button class="btn btn-gray" onclick="calcAC()">AC</button>
+        <button class="btn btn-gray" onclick="calcPercent()">%</button>
+        <button class="btn btn-orange" id="op-div" onclick="calcOp('÷')">÷</button>
+
+        <!-- Row 2 -->
+        <button class="btn btn-dark" onclick="calcNum('7')">7</button>
+        <button class="btn btn-dark" onclick="calcNum('8')">8</button>
+        <button class="btn btn-dark" onclick="calcNum('9')">9</button>
+        <button class="btn btn-orange" id="op-mul" onclick="calcOp('×')">×</button>
+
+        <!-- Row 3 -->
+        <button class="btn btn-dark" onclick="calcNum('4')">4</button>
+        <button class="btn btn-dark" onclick="calcNum('5')">5</button>
+        <button class="btn btn-dark" onclick="calcNum('6')">6</button>
+        <button class="btn btn-orange" id="op-sub" onclick="calcOp('−')">−</button>
+
+        <!-- Row 4 -->
+        <button class="btn btn-dark" onclick="calcNum('1')">1</button>
+        <button class="btn btn-dark" onclick="calcNum('2')">2</button>
+        <button class="btn btn-dark" onclick="calcNum('3')">3</button>
+        <button class="btn btn-orange" id="op-add" onclick="calcOp('+')">+</button>
+
+        <!-- Row 5 -->
+        <button class="btn btn-dark" onclick="calcPlusMinus()">+/−</button>
+        <button class="btn btn-dark" onclick="calcNum('0')">0</button>
+        <button class="btn btn-dark" onclick="calcDot()">.</button>
+        <button class="btn btn-orange" onclick="calcEquals()">=</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aftab Raza | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!--============ NAVBAR============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">AR<span class="dot">.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- ========== HERO / HOME ========== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-eyebrow"> Hello, I'm</p>
+      <h1 class="hero-name">Aftab <span class="accent">Raza</span></h1>
+      <h2 class="hero-role">
+        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-bio">
+        A BCA student from Bareilly with a passion for building clean,
+        functional web experiences. Quick learner, hardworking, and
+        always curious about what's next in tech.
+      </p>
+      <div class="hero-btns">
+        <!-- 
+          
+          📌 RESUME BUTTON:
+          
+        -->
+        <a href="Aftab_Raza_Resume.pdf" download class="btn btn-primary">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <a href="#projects" class="btn btn-outline">See Projects</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/aftab-raza-778572353/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/aftab-raza-00" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100047359881848" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/aftab_raza_ansari_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/+919389377855" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <!-- 
+          =============================================
+          📌 SOCIAL LINKS:
+          
+        -->
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <!-- 
+       PROFILE PHOTO -->
+      <div class="photo-frame">
+        <img src="profile.jpg" alt="Aftab Raza" id="profileImg"
+          onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex'"/>
+        <div class="photo-placeholder" id="photoPlaceholder">
+          <i class="fas fa-user"></i>
+          <span>Add profile.jpg</span>
+        </div>
+      </div>
+      <div class="photo-badge">BCA Student</div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <p class="section-eyebrow">Who I Am</p>
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm <strong>Aftab Raza</strong>, a BCA student at <strong>Future University, Bareilly</strong>.
+            I'm passionate about web development and building things that live on the internet.
+            Currently doing a <strong>Frontend Development Internship at CodeAlpha</strong>, where I'm
+            working on real-world projects using HTML, CSS, and JavaScript.
+          </p>
+          <p>
+            I believe in learning by doing. Outside of coding, I'm into fitness, research, and exploring
+            AI tools — always looking for ways to grow both personally and professionally.
+          </p>
+          <div class="about-cards">
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="card-label">Location</span>
+                <span class="card-value">Bareilly, UP</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-university"></i>
+              <div>
+                <span class="card-label">College</span>
+                <span class="card-value">Future University</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="card-label">Degree</span>
+                <span class="card-value">BCA (Pursuing)</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <span class="card-label">Internship</span>
+                <span class="card-value">CodeAlpha</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="card-label">Email</span>
+                <span class="card-value">mhaftab0@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-heart"></i>
+              <div>
+                <span class="card-label">Interests</span>
+                <span class="card-value">Fitness · AI · Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-box">
+            <span class="stat-num accent">3+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num accent">1</span>
+            <span class="stat-label">Internship</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num accent">5+</span>
+            <span class="stat-label">Skills</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num accent">∞</span>
+            <span class="stat-label">Curiosity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section section-dark" id="skills">
+    <div class="section-inner">
+      <p class="section-eyebrow">What I Know</p>
+      <h2 class="section-title">My <span class="accent">Skills</span></h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h3>HTML5</h3>
+          <p>Semantic structure, forms, layouts</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+          <span class="skill-level">Beginner → Growing</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3>CSS3</h3>
+          <p>Flexbox, Grid, animations, responsive design</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+          <span class="skill-level">Beginner → Growing</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <h3>JavaScript</h3>
+          <p>DOM manipulation, events, logic building</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div>
+          <span class="skill-level">Beginner → Growing</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+          <h3>Microsoft Excel</h3>
+          <p>Data entry, formulas, basic analysis</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+          <span class="skill-level">Beginner → Growing</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-robot"></i></div>
+          <h3>AI Tools</h3>
+          <p>ChatGPT, Claude, prompt engineering</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+          <span class="skill-level">Exploring</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Building responsive, clean web pages</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 68%"></div></div>
+          <span class="skill-level">Beginner → Growing</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <p class="section-eyebrow">What I've Built</p>
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-tag">CodeAlpha Task 1</div>
+          <div class="project-icon"><i class="fas fa-calculator"></i></div>
+          <h3>iOS-Style Calculator</h3>
+          <p>A fully functional dark-themed calculator inspired by iPhone's native calculator. Built with pure HTML, CSS & JavaScript.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <!-- 
+              📌 GitHub link 
+            -->
+            <a href="https://github.com/aftab-raza-00/calculator" target="_blank" class="proj-btn">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">CodeAlpha Task 2</div>
+          <div class="project-icon"><i class="fas fa-images"></i></div>
+          <h3>Image Gallery</h3>
+          <p>A responsive image gallery with smooth hover effects and lightbox functionality. Clean and modern UI design.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/YOUR_USERNAME/image-gallery" target="_blank" class="proj-btn">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-tag">CodeAlpha Task 3</div>
+          <div class="project-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>Portfolio Website</h3>
+          <p>This portfolio — a personal brand site showcasing my skills, projects, and journey as a frontend developer.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/YOUR_USERNAME/portfolio" target="_blank" class="proj-btn">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-dark" id="contact">
+    <div class="section-inner">
+      <p class="section-eyebrow">Get In Touch</p>
+      <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <p class="contact-intro">
+            Whether you have a project idea, an opportunity, or just want to say hi —
+            my inbox is always open. I'll get back to you as soon as I can!
+          </p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:mhaftab0@gmail.com">mhaftab0@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span>Bareilly, Uttar Pradesh, India</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <span class="contact-label">WhatsApp</span>
+                <!-- 📌 WhatsApp number  -->
+                <a href="https://wa.me/+919389377855" target="_blank">Chat on WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/aftab-raza-778572353/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/aftab-raza-00" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100047359881848" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/aftab_raza_ansari_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/+919389377855" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="e.g. Rahul Sharma" id="formName"/>
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" placeholder="e.g. rahul@gmail.com" id="formEmail"/>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="e.g. Project Collaboration" id="formSubject"/>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Write your message here..." id="formMessage"></textarea>
+          </div>
+          <button class="btn btn-primary full-width" onclick="sendMessage()">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-note" id="formStatus"></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>Designed & Built by <span class="accent">Aftab Raza</span> &nbsp;|&nbsp; BCA Student · CodeAlpha Intern</p>
+    <p class="footer-sub">© 2025 All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

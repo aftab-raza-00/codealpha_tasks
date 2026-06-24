@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+/* ── Outer wrapper ── */
+.calc-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ── Calculator body ── */
+.calc {
+  background: #1c1c1e;
+  border-radius: 40px;
+  width: 320px;
+  padding: 2rem 1.2rem 1.5rem;
+  border: 0.5px solid #3a3a3c;
+}
+
+/* ── Display area ── */
+.display {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 0.5rem 1rem;
+  gap: 4px;
+}
+
+/* Small expression line upar */
+.expression {
+  font-size: 16px;
+  color: #8e8e93;
+  min-height: 22px;
+  text-align: right;
+}
+
+/* Big result number */
+.result {
+  font-size: 56px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 280px;
+}
+
+/* ── Button Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* ── Base button style ── */
+.btn {
+  border: none;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  font-size: 26px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.1s;
+  user-select: none;
+}
+
+.btn:active {
+  filter: brightness(1.4);
+}
+
+/* ── Button colors ── */
+.btn-gray   { background: #636366; color: #ffffff; }   /* AC, ⌫, % */
+.btn-dark   { background: #3a3a3c; color: #ffffff; }   /* numbers */
+.btn-orange { background: #FF9F0A; color: #ffffff; }   /* operators */
+
+/* Active state — jab operator selected ho */
+.btn-orange.active {
+  background: #ffffff;
+  color: #FF9F0A;
+}

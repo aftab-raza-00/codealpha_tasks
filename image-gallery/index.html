@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <button class="back-btn"><i class="fas fa-chevron-left"></i></button>
+    <h1 class="header-title">Albums</h1>
+    <div class="header-actions">
+      <button class="icon-btn"><i class="fas fa-plus"></i></button>
+      <button class="icon-btn"><i class="fas fa-ellipsis"></i></button>
+    </div>
+  </header>
+
+  <!-- ========== FILTER TABS ========== -->
+  <div class="tabs-wrap">
+    <div class="tabs">
+      <button class="tab active" data-filter="all">Personal</button>
+      <button class="tab" data-filter="nature">Nature</button>
+      <button class="tab" data-filter="food">Food</button>
+      <button class="tab" data-filter="travel">Travel</button>
+      <button class="tab" data-filter="people">People</button>
+    </div>
+  </div>
+
+  <!-- ========== GALLERY GRID ========== -->
+  <main class="gallery-wrap">
+    <div class="gallery" id="gallery">
+
+      <!-- Card structure:
+           data-category = filter ke liye
+           data-title    = image ke upar label
+           Placeholder images Unsplash se hain — free & legal
+      -->
+
+      <div class="card" data-category="people" data-title="Family Fun">
+        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=400&q=80" alt="Family Fun" loading="lazy"/>
+        <div class="card-label">Family Fun</div>
+      </div>
+
+      <div class="card" data-category="people" data-title="Group Laughs">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=80" alt="Group Laughs" loading="lazy"/>
+        <div class="card-label">Group Laughs</div>
+      </div>
+
+      <div class="card" data-category="food" data-title="Delicious Bites">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="Delicious Bites" loading="lazy"/>
+        <div class="card-label">Delicious Bites</div>
+      </div>
+
+      <div class="card" data-category="nature" data-title="In the Sun">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="In the Sun" loading="lazy"/>
+        <div class="card-label">In the Sun</div>
+      </div>
+
+      <div class="card" data-category="travel" data-title="City Lights">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&q=80" alt="City Lights" loading="lazy"/>
+        <div class="card-label">City Lights</div>
+      </div>
+
+      <div class="card" data-category="nature" data-title="Furry Friends">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80" alt="Furry Friends" loading="lazy"/>
+        <div class="card-label">Furry Friends</div>
+      </div>
+
+      <div class="card" data-category="travel" data-title="Sunset View">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&q=80" alt="Sunset View" loading="lazy"/>
+        <div class="card-label">Sunset View</div>
+      </div>
+
+      <div class="card" data-category="food" data-title="Morning Brew">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Morning Brew" loading="lazy"/>
+        <div class="card-label">Morning Brew</div>
+      </div>
+
+      <div class="card" data-category="people" data-title="Good Times">
+        <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=400&q=80" alt="Good Times" loading="lazy"/>
+        <div class="card-label">Good Times</div>
+      </div>
+
+      <div class="card" data-category="nature" data-title="Wild Beauty">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=400&q=80" alt="Wild Beauty" loading="lazy"/>
+        <div class="card-label">Wild Beauty</div>
+      </div>
+
+      <div class="card" data-category="travel" data-title="Mountain High">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80" alt="Mountain High" loading="lazy"/>
+        <div class="card-label">Mountain High</div>
+      </div>
+
+      <div class="card" data-category="food" data-title="Sweet Treats">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=80" alt="Sweet Treats" loading="lazy"/>
+        <div class="card-label">Sweet Treats</div>
+      </div>
+
+    </div>
+
+    <!-- Empty state (jab filter mein kuch na ho) -->
+    <div class="empty" id="emptyState" style="display:none;">
+      <i class="fas fa-images"></i>
+      <p>No photos here yet</p>
+    </div>
+  </main>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+    <button class="lb-prev"  id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+    <button class="lb-next"  id="lbNext"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-content">
+      <img src="" alt="" id="lbImg"/>
+      <p class="lb-title" id="lbTitle"></p>
+    </div>
+  </div>
+
+  <!-- ========== BOTTOM NAV ========== -->
+  <nav class="bottom-nav">
+    <button class="bnav-btn"><i class="fas fa-photo-film"></i><span>Library</span></button>
+    <button class="bnav-btn active"><i class="fas fa-rectangle-list"></i><span>Collections</span></button>
+    <button class="bnav-btn" id="searchToggle"><i class="fas fa-magnifying-glass"></i></button>
+  </nav>
+
+  <!-- Search Bar (hidden by default) -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" id="searchInput" placeholder="Search albums..."/>
+    <button onclick="closeSearch()"><i class="fas fa-times"></i></button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
